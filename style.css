@@ -1,0 +1,180 @@
+:root{
+    /*dark mode*/
+    --color-dark:black;
+    --color-light:seashell;
+
+    /*color mode*/
+    --background:var(--color-dark);
+    --font:var(--color-light);
+
+}
+/*dark/light mode*/
+@media (prefers-color-scheme:light){
+    :root{
+        --background:var(--color-light);
+        --font:var(--color-dark);
+    }
+}
+
+*{
+    box-sizing:border-box;
+}
+html,body{
+    background-color: var(--background);
+    color:var(--font);
+    font-family: Helvetica;
+    font-size: 22px;
+    opacity: 0.9; 
+}
+
+/* navigation elements */
+nav{
+    height: 69px;
+    border-bottom: var(--background);
+    display: flex;
+    justify-content: space-around;
+}
+a, input{
+    cursor:pointer;
+   
+}
+a:hover{
+   
+    color:pink;
+}
+ul{
+    list-style:none;
+    display:flex;
+    flex-direction: row;
+}
+li{
+    margin:1rem;
+}
+
+div.logo{ 
+    width: 80px;
+    height: 50px;
+}
+
+.fa-moon{
+   background-color:darkmagenta;
+}
+.fa-sun{
+    color:cyan;
+}
+.ball{
+    background-color:darkseagreen;
+}
+
+/*  header/intro elements*/
+header {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+     justify-content: center;
+    
+}
+header img{
+    height: 700px;
+    
+}
+.mission{
+    position: absolute;
+    top: 40%;
+    background-color: var(--background);
+    text-align: center;
+    width: 1200px;
+   
+}
+/* tea of month section*/
+
+section{
+    display:grid;
+    grid-template:  1fr 2fr 2fr / repeat(5, 1fr);
+    text-align: center;
+}
+.title{
+    grid-area: 1 / 1 / 1 /  span 5; 
+    justify-self: center;
+   align-self: center;
+   
+   
+}
+
+
+
+.teaMonth{
+  width:100%;
+  min-width: 200px;
+}
+
+.teaMonthA{
+    grid-area: 2 / 2 / span 1 / span 1;
+    
+}
+.teaMonthB{
+    grid-area: 2 / 3 / span 1 / span 1;
+    
+}
+.teaMonthC{
+    grid-area: 2 / 4 / span 1 / span 1;
+    
+}
+.teaMonthD{
+    grid-area: 3 / 2 / span 1 / span 1;
+    
+}
+.teaMonthE{
+    grid-area: 3 / 4 / span 1 / span 1;
+    
+}
+
+
+.location{
+    grid-area: 1 / 1 / 1 / span 5;
+    align-self:center;
+    justify-self: center;
+}
+
+
+
+address {
+    background-color: var(--background);
+    margin:.5vw;
+    
+   
+}
+.addressA{
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+.addressB{
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+
+.addressC{
+    grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.locationInfo{
+    display:grid;
+    grid-template:   1fr 2fr 1fr / repeat(5, 1fr); 
+    grid-gap:1px;
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
+    background-repeat:  no-repeat;
+    background-position: center;
+
+}
+
+@media(max-width:800px){
+section{
+/* need to work on this-currently not working*/
+    grid-template:.5fr 5(1fr) / 1fr;
+
+}
+}
+
+
+
+
+   
